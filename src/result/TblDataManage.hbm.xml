@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-15 16:59:51 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="result.TblDataManage" table="TBL_DATA_MANAGE" schema="SWTSETTLE">
+        <comment>&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;&#177;&#237;</comment>
+        <composite-id name="id" class="result.TblDataManageId">
+            <key-property name="dataCode" type="string">
+                <column name="DATA_CODE" length="10" />
+            </key-property>
+            <key-property name="parentCode" type="string">
+                <column name="PARENT_CODE" length="20" />
+            </key-property>
+            <key-property name="dataLanguage" type="string">
+                <column name="DATA_LANGUAGE" length="3" />
+            </key-property>
+        </composite-id>
+        <property name="dataName" type="string">
+            <column name="DATA_NAME" length="150" not-null="true">
+                <comment>PK:&#215;&#214;&#181;&#228;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="300">
+                <comment>&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="dataState" type="string">
+            <column name="DATA_STATE" length="1">
+                <comment>&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="dataLevel" type="string">
+            <column name="DATA_LEVEL" length="1">
+                <comment>&#188;&#182;&#177;&#240;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
